@@ -1,0 +1,83 @@
+.segmentation-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  padding-top: 50px;
+}
+
+.save-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px 16px;
+  background-color: #c02121;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.save-button:hover {
+  background-color: #a01a1a;
+}
+
+.segmentation-item {
+  display: flex;
+  gap: 0px;
+  align-items: center;
+  height: 400px; 
+}
+
+.segmentation-image {
+  flex: 1;
+  display: flex;
+  margin-left: 150px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 500px;   
+  max-height: 380px;  
+}
+
+.segmentation-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: block;
+}
+
+
+.no-data {
+  font-size: 1.2rem;
+  color: #777;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 600;
+}
+
+.save-button img {
+  width: 20px;
+  height: 20px;
+  margin: 0 8px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.tooltip {
+  background-color: rgba(0,0,0,0.75);
+  color: white;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  pointer-events: none;
+  white-space: nowrap;
+  transform: translate(-50%, -120%);
+  position: absolute;
+  z-index: 1000;
+}

@@ -1,0 +1,160 @@
+.detection-image-container {
+  position: relative;
+  display: inline-block;
+  padding-top: 45px;
+  margin-left: 50px;
+}
+
+.image-label {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #c02121;
+  color: white;
+  padding: 7px 25px;
+  border-radius: 4px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.detection-image {
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.detection-image:hover {
+  transform: scale(1.05);
+}
+
+
+.detection-chart-container {
+  margin-top: 20px;
+  margin-left: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.chart-layout {
+  display: flex;
+  align-items: center; 
+  gap: 40px;
+}
+
+.detection-container {
+  padding: 10px;
+}
+
+.top-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.download-button,
+.group-button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #c02121;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.group-button-container {
+  position: relative;
+  display: inline-block;
+}
+
+.group-select {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  min-width: 160px;
+}
+
+.no-data {
+  font-size: 1.2rem;
+  color: #777;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.detection-item {
+  display: flex;
+  gap: 30px;
+  margin: 80px 30px 0;
+}
+
+.detection-image-container {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.image-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.detection-image {
+  max-width: 280px;
+  max-height: 280px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  object-fit: contain;
+}
+
+.detection-chart-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result-text {
+  margin-bottom: 10px;
+}
+
+.result-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.detection-result {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.label-normal {
+  color: #4caf50;
+}
+
+.label-pneumonia {
+  color: #f44336;
+}
+
+.warning-icon,.download-button img, .group-button img {
+  width: 20px;
+  height: 20px;
+  margin: 0 8px;
+  vertical-align: middle;
+  display: inline-block;
+  }
+

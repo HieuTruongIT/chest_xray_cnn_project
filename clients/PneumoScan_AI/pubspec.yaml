@@ -1,0 +1,42 @@
+name: pneumoscan_ai
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.19.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  font_awesome_flutter: ^10.6.0
+  cupertino_icons: ^1.0.2
+  image_picker: ^1.0.4
+  camera: ^0.10.5+9
+  path_provider: ^2.0.14
+  path: ^1.8.3
+  dio: ^5.0.0 
+  provider: ^6.1.5
+  fl_chart: ^0.64.0
+  screenshot: ^3.0.0 
+  permission_handler: ^11.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/intro_logo_pneumonia.png
+    - assets/logo_uth.png
+    - assets/logo_penumonia.png
+    - assets/logo_freeback.png
+    - assets/logo_add_accounts.png
+    - assets/logo_facebook.png
+    - assets/logo_google.png
+    - assets/logo_phone.png
+    - assets/logo_waringSign.png
+

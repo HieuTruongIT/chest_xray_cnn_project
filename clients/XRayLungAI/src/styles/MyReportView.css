@@ -1,0 +1,279 @@
+.my-report-container {
+  max-width: 100%;
+  margin: 30px auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+  color: #222;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+.report-table thead th {
+  color: #555;
+  font-weight: 700;
+  font-size: 15px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #eee;
+  text-align: left;
+  user-select: none;
+}
+
+.report-table tbody tr {
+  background: #f9faff;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: default;
+}
+
+.report-table tbody tr:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgb(0 0 0 / 0.15);
+  background: #e8f0fe;
+}
+
+.report-table tbody td {
+  padding: 16px 18px;
+  font-size: 14.5px;
+  vertical-align: middle;
+  color: #333;
+  position: relative;
+}
+
+.report-table tbody td:first-child {
+  font-weight: 600;
+  color: #1a73e8;
+}
+
+.action-buttons button {
+  margin-right: 12px;
+  padding: 8px 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  filter: drop-shadow(0 0 0 transparent);
+}
+
+.action-buttons button:last-child {
+  margin-right: 0;
+}
+
+/* Xem - vàng gradient */
+.action-buttons button[title="Xem"] {
+  background: linear-gradient(135deg, #f9d423, #ff4e50);
+  color: white;
+  box-shadow: 0 3px 8px rgb(255 78 80 / 0.4);
+}
+.action-buttons button[title="Xem"]:hover {
+  box-shadow: 0 6px 14px rgb(255 78 80 / 0.7);
+  transform: scale(1.1);
+}
+
+/* Tải xuống - xanh dương */
+.action-buttons button[title="Tải xuống"] {
+  background: linear-gradient(135deg, #56ab2f, #a8e063);
+  color: white;
+  box-shadow: 0 3px 8px rgb(168 224 99 / 0.5);
+}
+.action-buttons button[title="Tải xuống"]:hover {
+  box-shadow: 0 6px 16px rgb(168 224 99 / 0.8);
+  transform: scale(1.1);
+}
+
+/* Đổi tên - xanh biển đậm */
+.action-buttons button[title="Đổi tên"] {
+  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+  color: white;
+  box-shadow: 0 3px 8px rgb(109 213 237 / 0.5);
+}
+.action-buttons button[title="Đổi tên"]:hover {
+  box-shadow: 0 6px 18px rgb(109 213 237 / 0.9);
+  transform: scale(1.1);
+}
+
+/* Xóa - đỏ tươi */
+.action-buttons button[title="Xóa"] {
+  background: linear-gradient(135deg, #f85032, #e73827);
+  color: white;
+  box-shadow: 0 3px 8px rgb(231 56 39 / 0.6);
+}
+.action-buttons button[title="Xóa"]:hover {
+  box-shadow: 0 8px 22px rgb(231 56 39 / 0.9);
+  transform: scale(1.1);
+}
+
+/* Nút hover animation smooth */
+.action-buttons button:hover {
+  outline: none;
+  filter: brightness(1.1);
+}
+
+/* Không có báo cáo */
+.no-reports {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  padding: 24px 0;
+  font-size: 16px;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 30px 32px;
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgb(0 0 0 / 0.2);
+  width: 380px;
+  max-width: 90vw;
+  text-align: center;
+  animation: scaleUp 0.3s ease forwards;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+.modal-content h3 {
+  margin-bottom: 18px;
+  font-weight: 700;
+  font-size: 22px;
+  color: #1a73e8;
+}
+
+.modal-content p {
+  font-size: 15px;
+  margin-bottom: 24px;
+  color: #444;
+}
+
+.modal-content input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 1.8px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 22px;
+  transition: border-color 0.3s ease;
+}
+
+.modal-content input[type="text"]:focus {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 8px #a3c0ff88;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 12px 0;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 16px;
+  user-select: none;
+}
+
+.modal-actions button:first-child {
+  background-color: #1a73e8;
+  color: white;
+  box-shadow: 0 5px 15px rgb(26 115 232 / 0.6);
+}
+.modal-actions button:first-child:hover {
+  background-color: #155ab6;
+  box-shadow: 0 8px 22px rgb(21 90 182 / 0.85);
+}
+
+.modal-actions button:last-child {
+  background-color: #f5f5f5;
+  color: #555;
+  box-shadow: 0 5px 15px rgb(150 150 150 / 0.25);
+}
+.modal-actions button:last-child:hover {
+  background-color: #e0e0e0;
+  color: #333;
+  box-shadow: 0 8px 20px rgb(100 100 100 / 0.3);
+}
+
+.toast {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background-color: #323232;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  font-weight: 500;
+  z-index: 9999;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.toast-info {
+  background-color: #2196f3;
+}
+
+.toast-success {
+  background-color: #4caf50;
+}
+
+.toast-error {
+  background-color: #f44336;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+

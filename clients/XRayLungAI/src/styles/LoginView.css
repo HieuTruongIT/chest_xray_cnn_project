@@ -1,0 +1,273 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #f2f2f2;
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px; 
+  min-height: 420px;
+}
+
+.login-header {
+  flex: 1;
+  padding: 40px;
+}
+
+.login-header .logo {
+  width: 210px;
+  height: 90px;
+  margin-bottom: 24px;
+}
+
+.login-header h1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 10px;
+  color: #202124;
+}
+
+.login-header p {
+  font-size: 14px;
+  color: #5f6368;
+}
+
+.login-header .brand {
+  color: #1a73e8;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.account-section {
+  flex: 1.2;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.account-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.account-card {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 2px solid #dadce0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.account-card:hover {
+  background-color: #f1f3f4;
+}
+
+.method-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 15px;
+  color: #202124;
+  font-weight: 500;
+}
+
+.email {
+  font-size: 13px;
+  color: #5f6368;
+}
+
+.account-item.other {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 2px solid #dadce0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.account-item.other:hover {
+  background-color: #f1f3f4;
+}
+
+.footer-note {
+  font-size: 12px;
+  color: #5f6368;
+  margin-top: 25px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.footer-note a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.footer-note a:hover {
+  text-decoration: underline;
+}
+.footer-help {
+  font-size: 12px;
+  color: #5f6368;
+  margin-top: 16px;
+}
+
+.footer-help a {
+  color: #5f6368;
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+.footer-help a:hover {
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+/* Nền mờ đen đằng sau popup */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  animation: fadeInModal 0.3s ease forwards;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Popup trắng hình chữ nhật */
+.modal-content {
+  background-color: #fff; /* trắng */
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 30px 35px;
+  width: 360px;
+  max-width: 90vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #202124;
+
+  animation: slideInModal 0.3s ease forwards;
+}
+
+@keyframes slideInModal {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Input */
+.modal-content input[type="tel"],
+.modal-content input[type="text"] {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.modal-content input[type="tel"]:focus,
+.modal-content input[type="text"]:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 6px #1a73e8;
+}
+
+/* Button */
+.modal-content button {
+  padding: 14px 0;
+  background-color: #1a73e8;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(26, 115, 232, 0.6);
+}
+
+.modal-content button:hover {
+  background-color: #155ab6;
+  box-shadow: 0 6px 16px rgba(21, 90, 182, 0.8);
+}
+
+/* Nút đóng modal, sửa lại để đúng góc phải trên */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s ease;
+  line-height: 1;
+  padding: 0;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Lỗi hiển thị */
+.error-message {
+  color: #d93025;
+  font-size: 14px;
+  margin-top: -8px;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .modal-content {
+    width: 90vw;
+    padding: 25px 20px;
+  }
+}

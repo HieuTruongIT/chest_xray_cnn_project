@@ -1,0 +1,11 @@
+flask
+tensorflow
+torch
+torchvision
+numpy
+opencv-python
+matplotlib
+pillow
+scikit-learn
+flask-cors
+reportlab

@@ -1,0 +1,189 @@
+/* Toàn bộ nền trắng, phong cách tối giản y tế */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: "Times New Roman", Georgia, serif;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* Wrapper chính */
+.report-wrapper {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  position: relative; 
+  padding-top: 60px;  
+}
+
+.header-container {
+  background-color: #f0f0f0; 
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  gap: 16px;
+  border-radius: 8px;
+}
+
+.header-container img{
+  width: 250px;
+  height: auto;
+}
+
+/* Container báo cáo như tờ giấy A4 */
+.report-container {
+  background-color: #ffffff;
+  padding: 40px;
+  width: 800px;
+  max-width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 0;
+}
+
+.export-button {
+  position: absolute;
+  top: 10px;
+  left: 130px;
+  background-color: #c02121;
+  color: white;
+  font-size: 14px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(192, 33, 33, 0.3);
+  transition: background-color 0.2s ease;
+}
+
+.export-button:hover {
+  background-color: #a01818;
+}
+
+/* Tiêu đề chính */
+.report-title {
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px;
+}
+
+/* Phần thông tin bệnh nhân */
+/* Tiêu đề */
+.patient-info h3,
+.report-section h3 {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #999;
+  padding-bottom: 4px;
+  font-weight: bold;
+}
+
+/* Khối thông tin bệnh nhân */
+.patient-info {
+  margin: 20px 0;
+}
+
+/* Lưới chia 2 cột */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+}
+
+/* Từng dòng thông tin */
+.info-row {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Thẻ báo cáo chi tiết */
+.report-card {
+  padding: 12px 16px;
+  border: 1px solid #999;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.report-card p {
+  margin: 4px 0;
+}
+
+.report-card img {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+}
+
+/* Đáp ứng cho thiết bị nhỏ */
+@media (max-width: 768px) {
+  .report-container {
+    padding: 20px;
+  }
+
+  .export-button {
+    float: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .report-card img {
+    max-width: 100%;
+  }
+}
+
+/* In ấn */
+@media print {
+  .export-button {
+    display: none;
+  }
+
+  .report-wrapper {
+    padding: 0;
+  }
+
+  .report-container {
+    border: none;
+    padding: 20px;
+  }
+}
+
+.no-data {
+  font-size: 1.2rem;
+  color: #777;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.save-button{
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  background-color: #c02121;
+  color: white;
+  font-size: 14px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(192, 33, 33, 0.3);
+  transition: background-color 0.2s ease;
+}
